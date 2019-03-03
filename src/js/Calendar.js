@@ -15,7 +15,18 @@ const Calendar = ({ startDate, endDate, currentMonth }) => {
   while (currentDate <= endOfMonth && currentDate <= endDate) {
     for (let i = 0; i < 7; i++) {
       days.push(
-        <td key={currentDate}>{dateFns.format(currentDate, dateFormat)}</td>
+        <td
+          className={
+            currentDate < startDate ||
+            currentDate > endDate ||
+            currentDate > endOfMonth
+              ? 'invalid'
+              : ''
+          }
+          key={currentDate}
+        >
+          {dateFns.format(currentDate, dateFormat)}
+        </td>
       );
       currentDate = dateFns.addDays(currentDate, 1);
     }

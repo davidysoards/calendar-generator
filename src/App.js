@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import dateFns from 'date-fns';
-
+import Header from './js/Header';
 import Main from './js/Main';
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
 
   handleUpdate = () => {
     this.setState({
-      startDate: new Date(document.getElementById('start').value),
+      startDate: dateFns.startOfDay(document.getElementById('start').value),
       numberOfDays: document.getElementById('days').value,
     });
   };
@@ -27,37 +27,7 @@ class App extends Component {
     return (
       <div className="app-container">
         <header>
-          <div className="header-container">
-            <div className="app-identity">
-              <h1>Dates Generator</h1>
-            </div>
-            <form>
-              <div className="app-inputs">
-                <label>Start Date</label>
-                <input
-                  type="date"
-                  name="start date"
-                  id="start"
-                  defaultValue={dateFns.startOfMonth(new Date())}
-                />
-                <label># of Days</label>
-                <input
-                  type="number"
-                  name="days"
-                  id="days"
-                  defaultValue={dateFns.getDaysInMonth(new Date())}
-                />
-                <input
-                  type="button"
-                  id="update"
-                  value="Update"
-                  onClick={() => {
-                    this.handleUpdate();
-                  }}
-                />
-              </div>
-            </form>
-          </div>
+          <Header handleUpdate={this.handleUpdate} />
         </header>
         <main>
           <Main

@@ -1,5 +1,5 @@
 body {
-  background: #eeeeee;
+  background: $bg;
 }
 
 h1 {
@@ -8,6 +8,11 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 4px;
   color: $react-blue;
+  font-weight: 600;
+}
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   font-weight: 600;
 }
 
@@ -77,23 +82,30 @@ header {
 
 table {
   background: white;
+  font-weight: 500;
 }
 
 th {
   height: 50px;
-  background: #999999;
-  border: #999999;
+  background: $blue-gray;
+  border: $blue-gray;
+  color: white;
 }
 
 td {
   text-align: center;
   height: $td-size;
   width: $td-size;
-  border: 1px solid #dddddd;
-  background-color: yellow;
+  border: 3px solid white;
+  background-color: $yellow;
 }
 
 tr td:first-child,
 tr td:nth-child(7) {
-  background: green;
+  background: $green;
+}
+
+.invalid {
+  background: $invalid !important;
+  color: $invalid;
 }
