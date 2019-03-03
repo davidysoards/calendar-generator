@@ -13,6 +13,9 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+  @media (max-width: 768px) {
+    font-size: 1.2em;
+  }
 }
 
 .app-container {
@@ -29,21 +32,40 @@ header {
   // padding-bottom: 3em;
   margin: 3em 1em;
   color: white;
+  @media (max-width: 768px) {
+    margin: 1em;
+  }
 }
 .app-identity {
   display: flex;
   align-items: center;
   margin: 0 0 2rem 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
   h1 {
-    margin-left: 2rem;
+    margin: 1em 0;
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
+    }
   }
 }
 
 .app-inputs {
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   label {
     padding-right: 1rem;
     font-size: 1.8rem;
     font-weight: 500;
+    @media (max-width: 768px) {
+      margin-bottom: 0.3em;
+      font-size: 1.6rem;
+    }
   }
   input {
     height: 40px;
@@ -59,6 +81,10 @@ header {
       color: white;
       background: $blue-gray;
       transition: 300ms;
+      @media (max-width: 768px) {
+        margin: 0 0 1em 0;
+        font-size: 1.5rem;
+      }
       &:hover {
         color: $blue-gray;
         background: white;
@@ -68,10 +94,16 @@ header {
       width: 180px;
       padding-left: 0.5em;
       margin-right: 1.5em;
+      @media (max-width: 768px) {
+        margin: 0 0 1em 0;
+      }
     }
     &#days {
       width: 120px;
       padding-left: 0.5em;
+      @media (max-width: 768px) {
+        margin: 0 0 1em 0;
+      }
     }
   }
 }
@@ -85,6 +117,9 @@ header {
 
 .days-of-week-header {
   width: $td-size * 7;
+  @media (max-width: 768px) {
+    width: $td-small-size * 7;
+  }
 }
 
 table {
@@ -102,6 +137,11 @@ th {
 td {
   text-align: center;
   height: $td-size;
+  @media (max-width: 768px) {
+    height: $td-small-size;
+    width: $td-small-size;
+  }
+
   width: $td-size;
   border: 3px solid white;
   background-color: $yellow;
