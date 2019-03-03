@@ -1,67 +1,70 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.scss';
+import dateFns from 'date-fns';
+
+import Main from './js/Main';
 
 class App extends Component {
+  state = {
+    startDate: dateFns.startOfMonth(new Date()),
+    numberOfDays: dateFns.getDaysInMonth(new Date()),
+  };
+
+  handleUpdate = () => {
+    this.setState({
+      startDate: new Date(document.getElementById('start').value),
+      numberOfDays: document.getElementById('days').value,
+    });
+  };
+
   render() {
+    const { startDate, numberOfDays } = this.state;
+    console.log('start date = ' + startDate);
+    const endDate = dateFns.addDays(startDate, numberOfDays - 1);
+    console.log('end date = ' + endDate);
+    const totalMonths = dateFns.differenceInCalendarMonths(endDate, startDate);
+    console.log('0 indexed # of months = ' + totalMonths);
     return (
       <div className="app-container">
         <header>
-          <div class="app-identity">
-            <h1>Calendar Generator</h1>
-          </div>
-          <div class="app-inputs">
-            <input
-              type="date"
-              name="start date"
-              value="2019-01-01"
-              id="start"
-            />
-            <input type="input" name="days" id="days" />
-            <input type="button" value="Update" id="update" />
+          <div className="header-container">
+            <div className="app-identity">
+              <h1>Dates Generator</h1>
+            </div>
+            <form>
+              <div className="app-inputs">
+                <label>Start Date</label>
+                <input
+                  type="date"
+                  name="start date"
+                  id="start"
+                  defaultValue={dateFns.startOfMonth(new Date())}
+                />
+                <label># of Days</label>
+                <input
+                  type="number"
+                  name="days"
+                  id="days"
+                  defaultValue={dateFns.getDaysInMonth(new Date())}
+                />
+                <input
+                  type="button"
+                  id="update"
+                  value="Update"
+                  onClick={() => {
+                    this.handleUpdate();
+                  }}
+                />
+              </div>
+            </form>
           </div>
         </header>
         <main>
-          <table>
-            <thead>
-              <tr>
-                <th>S</th>
-                <th>M</th>
-                <th>T</th>
-                <th>W</th>
-                <th>T</th>
-                <th>F</th>
-                <th>S</th>
-              </tr>
-            </thead>
-            <thead>
-              <tr>
-                <th colspan="7">
-                  <h2>March 2019</h2>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
-                <td>14</td>
-              </tr>
-            </tbody>
-          </table>
+          <Main
+            startDate={startDate}
+            endDate={endDate}
+            totalMonths={totalMonths}
+          />
         </main>
       </div>
     );

@@ -1,26 +1,78 @@
 body {
   background: #eeeeee;
 }
+
+h1 {
+  margin: 0 0 2rem 0;
+  font-size: 3.2em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: $react-blue;
+  font-weight: 600;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
 }
 header {
+  background: $blue-gray;
+}
+.header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200px;
-  background: #282c34;
+  // padding-bottom: 3em;
+  margin: 3em 1em;
   color: white;
 }
-main {
-  margin: 50px auto;
+
+.app-inputs {
+  label {
+    padding-right: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  input {
+    height: 40px;
+    &[type='button'] {
+      font-size: 1.8rem;
+      margin-left: 1.5em;
+      padding-left: 1em;
+      padding-right: 1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 50px;
+      border: solid white 3px;
+      color: white;
+      background: $blue-gray;
+      transition: 300ms;
+      &:hover {
+        color: $blue-gray;
+        background: white;
+      }
+    }
+    &#start {
+      width: 180px;
+      padding-left: 0.5em;
+      margin-right: 1.5em;
+    }
+    &#days {
+      width: 120px;
+      padding-left: 0.5em;
+    }
+  }
 }
 
-table,
-th,
-td {
-  border: 1px solid $black;
+.main-container {
+  display: flex;
+  margin: 5rem 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.days-of-week-header {
+  width: $td-size * 7;
 }
 
 table {
@@ -29,10 +81,19 @@ table {
 
 th {
   height: 50px;
+  background: #999999;
+  border: #999999;
 }
 
 td {
   text-align: center;
-  height: 100px;
-  width: 100px;
+  height: $td-size;
+  width: $td-size;
+  border: 1px solid #dddddd;
+  background-color: yellow;
+}
+
+tr td:first-child,
+tr td:nth-child(7) {
+  background: green;
 }
