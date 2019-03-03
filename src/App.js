@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div className="app-container">
         <header>
-          <Header handleUpdate={this.handleUpdate} />
+          <Header handleUpdate={this.handleUpdate} startDate={startDate} />
         </header>
         <main>
           <Main

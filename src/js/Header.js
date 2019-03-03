@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import dateFns from 'date-fns';
 import logo from '../img/glyphicons-46-calendar.svg';
 
-const Header = ({ handleUpdate }) => {
+const Header = ({ startDate, handleUpdate }) => {
   return (
     <div className="header-container">
       <div className="app-identity">
-        <img src={logo} width="50px" />
+        <img src={logo} alt="calendar icon" width="50px" />
         <h1>Calendar Generator</h1>
       </div>
       <form>
@@ -17,7 +17,7 @@ const Header = ({ handleUpdate }) => {
             type="date"
             name="start date"
             id="start"
-            defaultValue={dateFns.startOfMonth(new Date())}
+            defaultValue={dateFns.format(startDate, 'YYYY-MM-DD')}
           />
           <label># of Days</label>
           <input
