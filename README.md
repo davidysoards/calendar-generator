@@ -1,4 +1,4 @@
-![Calendar Icon](src/img/glyphicons-46-calendar.svg | width=250)
+<img src="https://github.com/davidysoards/calendar-generator/raw/master/src/img/glyphicons-46-calendar.svg" width="200">
 
 # React Calendar Generator
 
