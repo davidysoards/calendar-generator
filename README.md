@@ -1,5 +1,3 @@
-<img src="https://github.com/davidysoards/calendar-generator/raw/master/src/img/glyphicons-46-calendar.svg" width="200">
-
 # React Calendar Generator
 
 This project will be deployed via GitHub pages at [React Calendar Generator](https://davidysoards.github.io/calendar-generator-react).
