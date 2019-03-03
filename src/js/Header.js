@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import dateFns from 'date-fns';
+import logo from '../img/glyphicons-46-calendar.svg';
 
 const Header = ({ handleUpdate }) => {
   return (
     <div className="header-container">
       <div className="app-identity">
-        <h1>Dates Generator</h1>
+        <img src={logo} width="50px" />
+        <h1>Calendar Generator</h1>
       </div>
       <form>
         <div className="app-inputs">

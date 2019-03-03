@@ -2,6 +2,7 @@
   "name": "calendar-generator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://davidysoards.github.io/calendar-generator",
   "dependencies": {
     "date-fns": "^1.30.1",
     "node-sass": "^4.11.0",
@@ -14,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "prettier": "^1.16.4"
   }
 }
