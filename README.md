@@ -1,4 +1,4 @@
-![Calendar Icon](src/img/glyphicons-46-calendar.svg =250px)
+![Calendar Icon](src/img/glyphicons-46-calendar.svg | width=250)
 
 # React Calendar Generator
 
