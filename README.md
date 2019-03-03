@@ -1,10 +1,14 @@
-# React Calendar Generator
+# React Calendar Generator 📆
 
 This project will be deployed via GitHub pages at [React Calendar Generator](https://davidysoards.github.io/calendar-generator/).
 
 ## Create React App
 
 This project was created using 'create-react-app'.
+
+## date-fns
+
+I used the oh-so-helpful date-fns date utility library to help with the necessary date calculations.
 
 ## Styles
 
