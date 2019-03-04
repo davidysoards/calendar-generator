@@ -45,9 +45,10 @@ header {
   }
 
   h1 {
-    margin: 1em 0;
+    margin-left: 2rem;
     @media (max-width: 768px) {
       font-size: 1.6rem;
+      margin-left: 1em 0;
     }
   }
 }
