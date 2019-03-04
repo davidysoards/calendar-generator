@@ -8,23 +8,23 @@ self.__precacheManifest = [
     "url": "/calendar-generator/static/js/runtime~main.698bace5.js"
   },
   {
-    "revision": "60589adb485f11376f1e",
-    "url": "/calendar-generator/static/js/main.60589adb.chunk.js"
+    "revision": "0491c96fff4d08324e47",
+    "url": "/calendar-generator/static/js/main.0491c96f.chunk.js"
   },
   {
     "revision": "aa77d8ed9aa1490de450",
     "url": "/calendar-generator/static/js/2.aa77d8ed.chunk.js"
   },
   {
-    "revision": "60589adb485f11376f1e",
-    "url": "/calendar-generator/static/css/main.371a3925.chunk.css"
+    "revision": "0491c96fff4d08324e47",
+    "url": "/calendar-generator/static/css/main.2583d658.chunk.css"
   },
   {
     "revision": "aa77d8ed9aa1490de450",
     "url": "/calendar-generator/static/css/2.de56385e.chunk.css"
   },
   {
-    "revision": "80d2bac12dc9ef9f3987c2744ec36bd2",
+    "revision": "466ad4e24f87fc904e5956f70d96b122",
     "url": "/calendar-generator/index.html"
   }
 ];
