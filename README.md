@@ -18,8 +18,7 @@ I used **SCSS** to write the styles for the components that make up this applica
 - 1 sheet for color and size variables
 - 1 main stylesheet
 
-The \$td-size variable can be adjusted to change the size of the entire table.<br />
-It is currently set to 70px.
+The design is responsize and reduces in size and layout @ under 768px.
 
 **No CSS frameworks were used.** The layout uses Flexbox and good ol' HTML Tables.
 
