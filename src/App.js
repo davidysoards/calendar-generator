@@ -8,12 +8,14 @@ class App extends Component {
   state = {
     startDate: dateFns.startOfMonth(new Date()),
     numberOfDays: dateFns.getDaysInMonth(new Date()),
+    country: 'US',
   };
 
   handleUpdate = () => {
     this.setState({
       startDate: dateFns.startOfDay(document.getElementById('start').value),
       numberOfDays: document.getElementById('days').value,
+      country: document.getElementById('country').value,
     });
   };
 

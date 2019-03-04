@@ -47,7 +47,7 @@ header {
     margin-left: 2rem;
     @media (max-width: 768px) {
       font-size: 1.6rem;
-      margin: 1em 0;
+      margin: 1em 0 0;
     }
   }
 }
@@ -69,6 +69,9 @@ header {
   }
   input {
     height: 40px;
+    @media (max-width: 768px) {
+      height: 30px;
+    }
     &[type='button'] {
       font-size: 1.8rem;
       margin-left: 1.5em;
@@ -91,7 +94,7 @@ header {
       }
     }
     &#start {
-      width: 180px;
+      width: 170px;
       padding-left: 0.5em;
       margin-right: 1.5em;
       @media (max-width: 768px) {
@@ -100,6 +103,14 @@ header {
     }
     &#days {
       width: 120px;
+      padding-left: 0.5em;
+      margin-right: 1.5em;
+      @media (max-width: 768px) {
+        margin: 0 0 1em 0;
+      }
+    }
+    &#country {
+      width: 60px;
       padding-left: 0.5em;
       @media (max-width: 768px) {
         margin: 0 0 1em 0;
@@ -132,6 +143,10 @@ th {
   background: $blue-gray;
   border: $blue-gray;
   color: white;
+  @media (max-width: 768px) {
+    font-size: 0.9em;
+    height: 40px;
+  }
 }
 
 td {
@@ -140,8 +155,8 @@ td {
   @media (max-width: 768px) {
     height: $td-small-size;
     width: $td-small-size;
+    font-size: 0.9em;
   }
-
   width: $td-size;
   border: 3px solid white;
   background-color: $yellow;

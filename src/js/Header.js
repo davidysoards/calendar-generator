@@ -26,6 +26,8 @@ const Header = ({ startDate, handleUpdate }) => {
             id="days"
             defaultValue={dateFns.getDaysInMonth(new Date())}
           />
+          <label>Country</label>
+          <input type="text" name="country" id="country" defaultValue="US" />
           <input
             type="button"
             id="update"
