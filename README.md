@@ -1,6 +1,6 @@
 # React Calendar Generator 📆
 
-This project will be deployed via GitHub pages at [React Calendar Generator](https://davidysoards.github.io/calendar-generator/).
+This project is deployed via GitHub pages at [React Calendar Generator](https://davidysoards.github.io/calendar-generator/).
 
 ## Create React App
 
